@@ -27,14 +27,14 @@ jobs:
       - name: Install Python 3.11 with Nix
         run: nix --extra-experimental-features nix-command --extra-experimental-features flakes run nixpkgs#python311 -- -m venv .venv --copies
 
-      # - name: Activate virtual environment
-      #   run: source .venv/bin/activate
+      - name: Activate virtual environment
+        run: source .venv/bin/activate
 
-      # - name: Install numpy
-      #   run: ./venv/bin/pip install numpy
+      - name: Install numpy
+        run: ./venv/bin/pip install numpy
 
-      # - name: Fix numpy import issue
-      #   run: ./fix-python --venv .venv
+      - name: Fix numpy import issue
+        run: ./fix-python --venv .venv
 
-      # - name: Check numpy import after fix
-      #   run: python -c 'import numpy'
+      - name: Check numpy import after fix
+        run: python -c 'import numpy'

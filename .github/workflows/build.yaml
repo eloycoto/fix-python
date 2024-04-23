@@ -31,7 +31,7 @@ jobs:
         run: source .venv/bin/activate
 
       - name: Install numpy
-        run: ./venv/bin/pip install numpy
+        run: .venv/bin/pip install numpy
 
       - name: Fix numpy import issue
         run: ./fix-python --venv .venv

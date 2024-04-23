@@ -34,3 +34,5 @@ jobs:
           ./fix-python --venv .venv --libs ./gl.nix
           echo "Check numpy works"
           .venv/bin/python -c 'import cv2'
+          echo "Check opencv works"
+          .venv/bin/python -c 'import cv2'

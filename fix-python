@@ -12,6 +12,7 @@ DEFAULT_LIBS_EXPRESSION="
     pkgs.gcc.cc
     pkgs.glibc
     pkgs.zlib
+    pkgs.libGL
   ]
 )
 "

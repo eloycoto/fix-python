@@ -24,8 +24,8 @@ jobs:
       - name: Install Python 3.11 with Nix
         run: nix --extra-experimental-features nix-command --extra-experimental-features flakes --offline run nixpkgs#python311 -- -c 'print("Hello world")'
 
-      # - name: Install Python 3.11 with Nix
-      #   run: nix --extra-experimental-features nix-command --extra-experimental-features flakes --offline run nixpkgs#python311 -- -m venv .venv --copies
+      - name: Install Python 3.11 with Nix
+        run: nix --extra-experimental-features nix-command --extra-experimental-features flakes --offline run nixpkgs#python311 -- -m venv .venv --copies
 
       - name: Activate virtual environment
         run: source .venv/bin/activate

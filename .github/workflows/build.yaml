@@ -34,7 +34,7 @@ jobs:
         run: ls -lah
 
       - name: Fix numpy import issue
-        run: ./fix-python --venv .venv --libs "gl"
+        run: ./fix-python --venv .venv --libs ./gl.nix
 
       - name: Check numpy import after fix
         run: .venv/bin/python -c 'import numpy'

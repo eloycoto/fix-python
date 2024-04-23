@@ -22,7 +22,7 @@ jobs:
         uses: cachix/install-nix-action@v13
 
       - name: Install Python 3.11 with Nix
-        run: nix --extra-experimental-features nix-command --offline run nixpkgs#python311 -- -m venv .venv --copies
+        run: nix --extra-experimental-features nix-command --extra-experimental-features flakes --offline run nixpkgs#python311 -- -m venv .venv --copies
 
       - name: Activate virtual environment
         run: source .venv/bin/activate

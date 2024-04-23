@@ -31,7 +31,7 @@ jobs:
         run: .venv/bin/pip install numpy opencv-python
 
       - name: Fix numpy import issue
-        run: la -lah
+        run: ls -lah
 
       - name: Fix numpy import issue
         run: ./fix-python --venv .venv --libs "gl.nix"

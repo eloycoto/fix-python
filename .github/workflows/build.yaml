@@ -1,4 +1,4 @@
-name: Check numpy import
+name: build the things
 
 on:
   push:

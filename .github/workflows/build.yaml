@@ -34,4 +34,4 @@ jobs:
         run: ./fix-python --venv .venv
 
       - name: Check numpy import after fix
-        run: ./venv/bin/python -c 'import numpy'
+        run: .venv/bin/python -c 'import numpy'

@@ -6,6 +6,7 @@ on:
       - main
       - master
       - action
+      - opencv
   pull_request:
     branches:
       - main
@@ -28,8 +29,8 @@ jobs:
       - name: check that using it on numpy works
         run: |
           echo "Install numpy"
-          .venv/bin/pip install numpy
+          .venv/bin/pip install numpy opencv-python
           echo "Run fix-python"
-          ./fix-python --venv .venv
+          ./fix-python --venv .venv --libs ./gl.nix
           echo "Check numpy works"
-          .venv/bin/python -c 'import numpy'
+          .venv/bin/python -c 'import cv2'
